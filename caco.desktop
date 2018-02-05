@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CaCo
+Exec=bash -c '"$(dirname "$1")"/code/cli_cc.py' dummy %k
+Icon=caco.svg
+Terminal=true
+Type=Application
+
+

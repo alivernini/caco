@@ -1,0 +1,46 @@
+getting started with CaCo software (v0.1) ...
+... after you extract CaCo package to a folder
+
+===============================================
+
+Do you get the feeling of a terminal interface?
+
+    cd "folder where you extracted CaCo"
+
+    in "setup" folder:
+    > install -r requirements.txt
+
+    in "code" folder:
+    > python caco_cli
+
+==============================================
+
+Or...
+
+Do you like to start from the results?
+
+    > open caco_myprg folder
+
+    > take a look at the input images
+
+    > in the folder "output"  you can see an excel spreadsheet
+    with the computed gap fraction and other statistics
+
+    > right there, inside the "th_img" subfolder, have a peek
+    at the thresholded images, ... closer... zoom one:
+        - small gaps are identified in light grey
+        - big gaps are white
+        - vegetation is black
+
+    > this output was given by the "test_myprj.py"
+
+==============================================
+
+But ...you want a graphical interface...
+Could you wait until the next release?
+
+I hope so, thank you for reading this welcome to CaCo
+
+Buona giornata,
+Alessandro
+
