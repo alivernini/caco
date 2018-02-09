@@ -9,41 +9,72 @@ https://doi.org/10.1007/s00468-018-1666-3
 * is a Free and Open Source software released under MIT licence
 
 
-## Getting started with CaCo!
+## GETTING STARTED with CaCo v0.2 ...
+
 ===============================================
 
-Do you get the feeling of a terminal interface?
+# Start installing CaCo... #
 
-    cd "folder where you extracted CaCo"
+    LET'S HEAT UP THE ENVIRONMENTS:
 
-    in "setup" folder:
-    > install -r requirements.txt
+    - for Windows, please check/install:
+        * Microsoft build tools 2015
+        http://landinghub.visualstudio.com/visual-cpp-build-tools
+        * your favourite version of Python (recommended versions are: v2.7.8 or v3.6.4)
+        https://www.python.org/downloads/windows/
 
-    in "code" folder:
-    > python caco_cli
+    - For Mac OS, please check/install:
+        * your favourite version of Python (recommended versions are: v2.7.8 or v3.6.4)
+        https://www.python.org/downloads/mac-osx/
+
+    - For Linux:
+        * You are ready to go
+
+
+
+    LET'S INSTALL AND USE CACO
+
+    - In your terminal emulator (or command prompt):
+
+        * install CaCo:
+        > python -m pip install caco
+
+        * run CaCo
+        > python -m caco
+
+    If you use python3 and you get an error, try typing "python3" instead of "python"
+
 
 ==============================================
+# Starting from the results ... #
 
-Or...
 
-Do you like to start from the results?
+LET'S HAVE A LOOK AT THE RESULTS OF A TUTORIAL PROJECT
 
-    > open caco_myprg folder
+    * open download and extract the tutorial project (caco_myprg)
 
-    > take a look at the input images
+    * take a look at the input images
 
-    > in the folder "output"  you can see an excel spreadsheet
+    * in the folder "output"  you can see an excel spreadsheet
     with the computed gap fraction and other statistics
 
-    > right there, inside the "th_img" subfolder, have a peek
+    * right there, inside the "th_img" subfolder, have a peek
     at the thresholded images, ... closer... zoom one:
         - small gaps are identified in light grey
         - big gaps are white
         - vegetation is black
 
-    > this output was given by the "test_myprj.py"
+    * this output was given by the "test_myprj.py"
+
+    * can you set up caco to have the same results?
+
 
 ==============================================
+
+Now you are ready to analyze your images with CaCo!
+
+Just one tip to set up CaCo: copy the project paths from your file-manager
+
 
 Buona giornata,
 Alessandro

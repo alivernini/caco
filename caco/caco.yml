@@ -1,0 +1,36 @@
+band: greeness
+band_choices:
+- red
+- green
+- blue
+- greeness
+- grey
+get_tree_id: false
+input_dir: caco_myprj/input
+keys: !!python/tuple
+- gap_fraction
+- image_px
+- gap_px
+- gap_mean
+- gap_std_dev
+- gap_std_err
+- normal_gap_px
+- normal_gap_mean
+- normal_gap_std_dev
+- normal_gap_std_err
+- normal_gap_number
+- big_gap_px
+- big_gap_mean
+- big_gap_std_dev
+- big_gap_std_err
+- big_gap_number
+output_dir: caco_myprj/output
+output_xls: gap_fraction.xls
+raw_processing: true
+th_choices:
+- otzu
+- isodata
+- minimum
+th_dir: th_img
+th_switch: true
+threshold: minimum

@@ -1,7 +1,0 @@
-pandas==0.20.1
-scipy==0.19.1
-numpy==1.11.0
-scikit_image==0.13.1
-rawpy==0.10.1
-skimage==0.0
-PyYAML==3.12

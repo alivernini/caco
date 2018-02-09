@@ -1,0 +1,4 @@
+ include README.md
+ include SETUP.cfg
+ include caco/caco.yml
+ include icon/caco.svg
