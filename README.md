@@ -37,7 +37,7 @@ https://doi.org/10.1007/s00468-018-1666-3
     - In your terminal emulator (or command prompt):
 
         * install CaCo:
-        > python -m pip install caco
+        > python -m pip install --user caco
 
         * run CaCo
         > python -m caco
