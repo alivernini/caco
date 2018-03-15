@@ -51,8 +51,8 @@ https://doi.org/10.1007/s00468-018-1666-3
 
 LET'S HAVE A LOOK AT THE RESULTS OF A TUTORIAL PROJECT
 
-    * download and extract the tutorial project
-    link:https://github.com/alivernini/caco/releases/download/v0.2.4/caco_myprj.zip[caco_myprj]
+    * download and extract the tutorial project "caco_myprj"
+    https://github.com/alivernini/caco/releases/download/v0.2.4/caco_myprj.zip
 
     * take a look at the input images
 
