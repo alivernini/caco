@@ -62,13 +62,17 @@ def get_param3():
 
     # output statistics stored in the xls spreadsheet
     keys = (  # @@
-        'gap_fraction'       ,
         'image_px'           ,
+        'foliage_cover'      ,
+        'canopy_cover'       ,
+        'crown_porosity'     ,
+
         # statistics referred to all the gaps [TODO] refactor to all_gap prefix
-        'gap_px'             ,
-        'gap_mean'           ,
-        'gap_std_dev'        ,
-        'gap_std_err'        ,
+        'total_gap_fraction'       ,
+        'total_gap_px'             ,
+        'total_gap_mean'           ,
+        'total_gap_std_dev'        ,
+        'total_gap_std_err'        ,
 
         # a threshold is applied to divide gaps in normal gaps and big gaps
         # the threshold is given by gap_mean + gap_std_err
@@ -81,6 +85,7 @@ def get_param3():
         'normal_gap_number'  ,
 
         # statistics referred to normal gaps
+        'large_gap_fraction' ,
         'big_gap_px'         ,
         'big_gap_mean'       ,
         'big_gap_std_dev'    ,
@@ -97,7 +102,7 @@ def get_param3():
     param3 = {  # @@
         'input_dir'           : 'select directory', # input  directory [only photos]
         'output_dir'          : 'select directory', # output directory
-        'output_xls'          : 'cc_result.xls',    # name of the output spreadsheet
+        'output_xls'          : 'result_cc.xls',    # name of the output spreadsheet
         'raw_processing'      : True    ,          # set True for raw format input (for example .NEF)
 
         'band'                : 'grey',       # all CaCo statistics are computed on this band; alternatives are defined in <band choices>
@@ -196,7 +201,7 @@ def caco_all(param3):  # param3 defaults are defined in PARAM3
 
     # PARSE ALL THE FILES IN THE INPUT DIRECTORY AND INIT PANDAS TABLE
     data_2   = [(x, 0) for x in os.listdir(i_dir)]
-    label_2  = ['filename', 'gap_fraction']
+    label_2  = ['filename', 'total_gap_fraction']
     data = pds.DataFrame.from_records(data_2, columns=label_2)
     for key in param3['keys']:
         data[key] = None
@@ -229,6 +234,7 @@ def caco_all(param3):  # param3 defaults are defined in PARAM3
             for key in param3['keys']:
                 data.loc[row, key] = caco_data[key]
         except Exception as e:
+            print('got oyu')
             print(e)
 
     # write statistics

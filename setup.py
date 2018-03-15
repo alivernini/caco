@@ -35,7 +35,7 @@ classifiers0 = [
 setup(
   name                 = 'caco',
   description          = descrition0,
-  version              = '0.02.3',
+  version              = '0.02.4',
   license              = 'MIT',
   install_requires     = install_requires0,
   author               = 'Alessandro Alivernini',
@@ -43,7 +43,7 @@ setup(
   entry_points         = entry_points0,
   author_email         = 'alessandro.alivernini@crea.gov.it',
   url                  = 'https://github.com/alivernini/caco',
-  download_url         = 'https://github.com/alivernini/caco/archive/v0.1.tar.gz',
+  download_url         = 'https://github.com/alivernini/caco/archive/v0.2.5.tar.gz',
   keywords             = ['tree', 'canopy', 'gap fraction', 'lai', 'leaf area index'],
   classifiers          = classifiers0,
   include_package_data = True  # include fiels in MANIFES.in

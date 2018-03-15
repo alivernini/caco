@@ -217,8 +217,13 @@ class CacoImg():
         self.write_output_img(output)
 
         # compute the gap fraction
-        leaf_px = (output.shape[0] * output.shape[1]) - normal_gap_px - big_gap_px
-        gap_fraction = float(normal_gap_px) / float(leaf_px)
+        leaf_px            = (output.shape[0] * output.shape[1]) - normal_gap_px - big_gap_px
+        image_px           = output.shape[0] * output.shape[1]
+        total_gap_fraction = float(gap_px) / float(image_px)
+        large_gap_fraction = float(big_gap_px)/float(image_px)
+        foliage_cover      = float(1 - total_gap_fraction)
+        canopy_cover       = float(1 - large_gap_fraction)
+        crown_porosity     = 1 - foliage_cover / canopy_cover
 
         # prepare the dictionary for the desired statistics
         data_output = {
@@ -227,19 +232,26 @@ class CacoImg():
             'normal_gap_std_dev'   : normal_gap_std_dev,
             'normal_gap_std_err'   : normal_gap_std_err,
             'normal_gap_number'    : normal_gap_number,
+
             'big_gap_px'           : big_gap_px,
             'big_gap_mean'         : float(big_gap_px) / big_gap_number,
             'big_gap_std_dev'      : big_gap_std_dev,
             'big_gap_std_err'      : big_gap_std_err,
             'big_gap_number'       : big_gap_number,
-            'gap_px'               : gap_px,
-            'gap_mean'             : gap_mean,
-            'gap_std_dev'          : gap_std_dev,
-            'gap_std_err'          : gap_std_err,
-            'gap_number'           : normal_gap_number,
+
+            'total_gap_px'         : gap_px,
+            'total_gap_mean'       : gap_mean,
+            'total_gap_std_dev'    : gap_std_dev,
+            'total_gap_std_err'    : gap_std_err,
+            'total_gap_number'     : normal_gap_number + big_gap_number,
+
             'leaf_px'              : leaf_px,
-            'image_px'             : output.shape[0] * output.shape[1],
-            'gap_fraction'         : gap_fraction,
+            'image_px'             : image_px,
+            'total_gap_fraction'   : total_gap_fraction,
+            'large_gap_fraction'   : large_gap_fraction,
+            'foliage_cover'        : foliage_cover,
+            'canopy_cover'         : canopy_cover,
+            'crown_porosity'       : crown_porosity
         }
         return data_output
 

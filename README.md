@@ -9,7 +9,7 @@ https://doi.org/10.1007/s00468-018-1666-3
 * is a Free and Open Source software released under MIT licence
 
 
-## GETTING STARTED with CaCo v0.2 ...
+## GETTING STARTED with CaCo v0.2.4
 
 ===============================================
 
